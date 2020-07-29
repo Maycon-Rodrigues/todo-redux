@@ -1,7 +1,6 @@
 const initialState = [];
 
 const todos = (state = initialState, action) => {
-  console.log(action.payload);
   switch (action.type) {
     case 'ADD-TODO':
       return [...state, action.payload];
