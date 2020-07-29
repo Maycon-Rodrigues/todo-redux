@@ -1,6 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { checkTodo, removeTodo } from '../../actions/todoActions';
+import {
+  checkTodo,
+  removeTodo,
+  changePriority,
+} from '../../actions/todoActions';
 
 import './index.css';
 
@@ -8,6 +12,7 @@ const TodoList = () => {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
+  let priority = '';
   return (
     <>
       {todos.map((t) => {
@@ -25,12 +30,27 @@ const TodoList = () => {
                 {t.task}
               </label>
             </div>
-            <button
-              className="btnRemove"
-              onClick={() => dispatch(removeTodo(t.id))}
-            >
-              X
-            </button>
+            <div className="btnActions">
+              <select
+                value={t.priority}
+                ref={(el) => (priority = el)}
+                onChange={() => dispatch(changePriority(t.id, priority.value))}
+                className="select"
+                name="options"
+                id="priority"
+              >
+                <option>...</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="hight">Hight</option>
+              </select>
+              <button
+                className="btnRemove"
+                onClick={() => dispatch(removeTodo(t.id))}
+              >
+                X
+              </button>
+            </div>
           </div>
         );
       })}
