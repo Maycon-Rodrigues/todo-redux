@@ -20,6 +20,31 @@
   padding-left: 10px;
 }
 
+.btnActions {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  outline: none;
+  width: 50px;
+  padding: 2px;
+  font-size: 80%;
+  font-weight: 300;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select option {
+  color: black;
+}
+
 .btnRemove {
   width: 25px;
   height: 25px;
@@ -27,6 +52,8 @@
   outline: none;
   border-style: none;
   cursor: pointer;
+  align-items: center;
+  margin-left: 20px;
 
   transition: 0.5s;
 }
