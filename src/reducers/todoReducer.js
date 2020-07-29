@@ -10,6 +10,19 @@ const todos = (state = initialState, action) => {
         todo.id === action.payload ? { ...todo, done: !todo.done } : todo
       );
 
+    case 'CHANGE-PRIORITY':
+      return state.map((todo) =>
+        todo.id === action.payload.id
+          ? {
+              ...todo,
+              priority:
+                action.payload.priority !== '...'
+                  ? ''
+                  : action.payload.priority,
+            }
+          : todo
+      );
+
     case 'REMOVE-TODO':
       return state.filter((todo) => todo.id !== action.payload);
 
