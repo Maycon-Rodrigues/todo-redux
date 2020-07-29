@@ -25,6 +25,7 @@ const TodoForm = () => {
           ref={(el) => (input = el)}
           placeholder="New task"
           type="text"
+          maxLength="40"
           name="todo"
           id="formControl"
         />
