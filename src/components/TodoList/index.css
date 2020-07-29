@@ -1,0 +1,38 @@
+.cardList {
+  display: flex;
+  width: 480px;
+  height: 45px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+
+  padding: 0 10px 0 10px;
+
+  margin-bottom: 5px;
+
+  color: #fff;
+  background-color: rgb(72, 57, 112);
+}
+
+.taskName {
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.btnRemove {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  outline: none;
+  border-style: none;
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.btnRemove:hover {
+  font-weight: 700;
+  color: #fff;
+  background-color: red;
+}
