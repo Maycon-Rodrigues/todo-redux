@@ -22,7 +22,7 @@ const TodoList = () => {
       : { backgroundColor: 'transparent' };
 
   return (
-    <>
+    <div className="wrapper">
       {todos
         .sort((a, b) => b.priority - a.priority)
         .map((t) => {
@@ -69,7 +69,7 @@ const TodoList = () => {
             </div>
           );
         })}
-    </>
+    </div>
   );
 };
 
