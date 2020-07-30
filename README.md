@@ -12,7 +12,7 @@
 
 ## :rocket: Technologies
 
-- ⚛️ **React Js **
+- ⚛️ **React Js**
 
 - ⚛️ **Redux**
 
