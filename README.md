@@ -1,12 +1,14 @@
 # Todo List - Redux
 
-<h3  align="center"> Esse projeto foi desenvolvido a fim de praticar um pouco com redux.</h3>
+<h3  align="center"> Esse projeto foi desenvolvido a fim de praticar um pouco com react e redux.</h3>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
   </a>
 </p>
+
+![App screenshot](https://raw.githubusercontent.com/Maycon-Rodrigues/todo-redux/master/todo.png)
 
 ## :rocket: Technologies
 
