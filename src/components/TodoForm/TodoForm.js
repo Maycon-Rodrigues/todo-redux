@@ -19,8 +19,9 @@ const TodoForm = () => {
   };
 
   return (
+    <div className="wrapper">
     <div className="cardInput">
-      <form className="flex" onSubmit={_onSubmit}>
+      <form onSubmit={_onSubmit}>
         <input
           ref={(el) => (input = el)}
           placeholder="New task"
@@ -31,6 +32,7 @@ const TodoForm = () => {
         />
         <button type="submit">Add</button>
       </form>
+    </div>
     </div>
   );
 };
