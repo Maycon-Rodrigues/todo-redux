@@ -12,13 +12,25 @@ const TodoList = () => {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
-  let priority = '';
+  const colorPriority = (priority) =>
+    priority === 'low'
+      ? { backgroundColor: '#A6F4DC' }
+      : priority === 'medium'
+      ? { backgroundColor: '#f48c06' }
+      : priority === 'hight'
+      ? { backgroundColor: '#d00000' }
+      : { backgroundColor: 'transparent' };
+
   return (
     <>
       {todos.map((t) => {
         return (
           <div className="cardList" key={t.id}>
-            <div>
+            <div className="flexRow">
+              <div
+                className="tagPriority"
+                style={colorPriority(t.priority)}
+              ></div>
               <input
                 type="checkbox"
                 name="check"
@@ -33,10 +45,9 @@ const TodoList = () => {
             <div className="btnActions">
               <select
                 value={t.priority}
-                ref={(el) => (priority = el)}
-                onChange={() => dispatch(changePriority(t.id, priority.value))}
+                onChange={(e) => dispatch(changePriority(t.id, e.target.value))}
                 className="select"
-                name="options"
+                name="priority"
                 id="priority"
               >
                 <option>...</option>
