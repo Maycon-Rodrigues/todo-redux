@@ -29,6 +29,7 @@ const TodoForm = () => {
           maxLength="40"
           name="todo"
           id="formControl"
+          autoFocus
         />
         <button type="submit">Add</button>
       </form>
