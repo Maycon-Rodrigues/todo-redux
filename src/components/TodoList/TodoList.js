@@ -22,12 +22,13 @@ const TodoList = () => {
       : { backgroundColor: 'transparent' };
 
   return (
-    <div className="wrapper">
+    <div className="wrapperList">
       {todos
         .sort((a, b) => b.priority - a.priority)
         .map((t) => {
           return (
             <div className="cardList" key={t.id}>
+              <div className="card">
               <div className="flexRow">
                 <div
                   className="tagPriority"
@@ -57,14 +58,13 @@ const TodoList = () => {
                   <option>...</option>
                   <option value="1">Low</option>
                   <option value="2">Medium</option>
-                  <option value="3">Hight</option>
+                  <option value="3">High</option>
                 </select>
                 <button
                   className="btnRemove"
                   onClick={() => dispatch(removeTodo(t.id))}
-                >
-                  X
-                </button>
+                >X</button>
+              </div>
               </div>
             </div>
           );

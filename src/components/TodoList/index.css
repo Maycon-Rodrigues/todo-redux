@@ -1,24 +1,25 @@
-.wrapper {
+.wrapperList {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cardList {
-  display: flex;
-  width: 100%;
-  max-width: 480px;
-  height: 45px;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  margin: 0 20px 15px 20px;
-
-  padding: 0 10px 0 10px;
-
-  margin-bottom: 5px;
-
   color: #fff;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 20px 5px 20px;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
   background-color: rgb(72, 57, 112);
 }
 
@@ -75,8 +76,9 @@
   border-style: none;
   cursor: pointer;
   align-items: center;
+  justify-content: center;
   margin-left: 20px;
-
+  background-color: #ddd;
   transition: 0.5s;
 }
 
