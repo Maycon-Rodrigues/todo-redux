@@ -31,7 +31,3 @@ $ yarn install
 # Run the app
 $ yarn start
 ```
-
-## :memo: License
-
-This project is under the MIT license.
